@@ -1,0 +1,294 @@
+body {
+    background: #F1F1F1;
+    // overflow-y: scroll;
+    &.noscroll {
+        position: static !important;
+        width: 100%;
+        height: 100%;
+        overflow: hidden !important;
+        overflow-y: hidden !important;
+        margin: 0;
+        padding: 0;
+    }
+    &.small_size {
+        font-size: .938em;
+    }
+    &.large_size {
+        font-size: 1.125em;
+    }
+}
+html {
+    // overflow-y: scroll;
+}
+// 最外圍預設為100%
+.wrapper {
+    width: 100%;
+    margin: 0px auto;
+    overflow: hidden;
+    overflow-y: auto;
+    @include screen('mobile') {
+        background: #FFF;
+    }
+}
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: $container-max; //請看_variable.scss
+}
+.main {
+    position: relative;
+    margin: -10em auto 0;
+    top: 0px;
+    // overflow: hidden;
+    clear: both;
+    padding: 0; // max-width: $container-max;
+    // 可先設定一個中央區塊最大寬，限制accesskey對齊
+    @include screen('mobile') {
+        padding-top: 55px;
+        margin-top: 0;
+        top: 0;
+    }
+    // 內頁標題設定
+    h2 {
+        line-height: 1.25em;
+    }
+    .accesskey {
+        top: 8em !important;
+    }
+}
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerpage ClassName
+.innerpage {
+    padding-top: 8em;
+    background: #F1F1F1;
+    margin-bottom: 2em;
+    &:before {
+        content: "";
+        background: url(../images/inner_bg.jpg) no-repeat center bottom;
+        // background-size: contain;
+        width: 100%;
+        height: 13em;
+        position: relative;
+        top: 0em;
+        display: block;
+        left: 0;
+        // outline:1px solid red;
+        z-index: 1;
+        @include screen('mobile') {
+            height: 6em;
+            background: url(../images/inner_bg.jpg) no-repeat center top;
+            background-size: cover;
+        }
+    }
+    &:after {
+        content: "";
+        @include gradient($primaryColor, $secondaryColor, vertical);
+        width: 100%;
+        height: 15em;
+        position: absolute;
+        top: 0;
+        display: block;
+        left: 0;
+        z-index: 0;
+        @include screen('mobile') {
+            display: none;
+        }
+    }
+    @include screen('mobile') {
+        padding-top: 60px;
+        margin-bottom: 0;
+    }
+    h2.title {
+        position: relative;
+        padding-left: .8em;
+        padding-right: .8em;
+        @include screen('mobile') {
+            padding-right: .8em;
+        }
+        &:before {
+            content: "";
+            width: 5px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $primaryColor;
+        }
+        &:after {
+            content: "";
+            width: 5px;
+            height: 15px;
+            position: absolute;
+            top: 15px;
+            left: 0;
+            background: $lightColor;
+        }
+    }
+    .submenu {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+        @include screen('tablet') {
+            display: none;
+        }
+        // @include gutter();
+        &~.content {
+            @include make-xs-column(12);
+            @include make-sm-column(12);
+            @include make-md-column(9);
+            @include make-lg-column(9);
+        }
+        margin-left: -1*($grid-gutter-width/2);
+        h2 {
+            @include gradient($secondaryColor, $primaryColor, diagonal);
+            padding: .8em;
+            color: #FFF;
+            margin: 0 0 1px 0;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                display: block;
+                text-align: left;
+                margin-bottom: 1px;
+                background: $secondaryColor;
+                &:last-child {
+                    border-bottom: none;
+                }
+                a {
+                    display: block;
+                    padding: .8em 1em;
+                    color: #FFF;
+                    transition: .3s ease-out;
+                    line-height: 1.45em;
+                    &:hover,
+                    &:focus {
+                        background: darken($primaryColor, 0);
+                    }
+                }
+                &.active {
+                    a {
+                        background: darken($primaryColor, 0);
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(12);
+        @include make-lg-column(12);
+        @include gutter(60px);
+        background: #FFF;
+        padding-top: 1em;
+        padding-bottom: 1.5em;
+        @include screen('desktop') {
+            min-height: 560px;
+        }
+        @include screen('mobile') {
+            min-height: auto;
+            @include gutter(0);
+        }
+        .function {
+            text-align: right;
+            // min-width: 100px;
+            margin: 0px 0 0 auto;
+            position: relative;
+            z-index: 9;
+            @include screen('mobile') {
+                float: none;
+                // width: 100%;
+                margin: 0 0 5px 0;
+            }
+        }
+    }
+    >.container {
+        @include gutter(6em); //gutter 代表左右要留白
+        padding-top: 1em;
+        background: #FFF;
+        padding-bottom: 2em;
+        box-shadow: 0px 2px 10px RGBA(0, 0, 0, .1);
+        @include screen('mobile') {
+            @include gutter;
+        }
+    }
+}
+.fixed_bar {
+    width: 4.5em;
+    background: RGBA(0, 0, 0, .75);
+    height: auto;
+    top: 20%;
+    border-radius: 8px;
+    position: fixed;
+    right: 0%;
+    z-index: 15;
+    @media screen and (max-width: 1280px) {
+        border-radius: 8px 0 0 8px;
+    }
+    ul {
+        @include li-reset;
+        li {
+            margin-bottom: 1px;
+            padding: .5em .5em 0;
+            text-align: center;
+            font-size: .813em;
+            &:last-child {
+                padding: .5em;
+                a {
+                    border-bottom: none;
+                }
+            }
+        }
+        a {
+            color: #FFF;
+            display: block;
+            padding: .5em;
+            min-height: 60px;
+            line-height: 1.25em;
+            box-sizing: border-box;
+            border-radius: 5px;
+            img {
+                width: 24px;
+                height: 24px;
+                margin: 0px auto .1em;
+                display: block;
+            }
+            &:hover, &:focus {
+                background: $aHover;
+            }
+        }
+    }
+    @include screen('mobile') {
+        width: 100%;
+        height: 60px;
+        bottom: 0;
+        left: 0;
+        top:auto;
+        border-radius: 0;
+        ul {
+            li {
+                box-sizing: border-box;
+                width: 25%;
+                float: left;
+                top: auto;
+                margin: 0;
+                padding: 0;
+                &:last-child {
+                    padding: 0em;
+                    a {
+                        border-bottom: none;
+                    }
+                }
+                a {
+                    margin: 0;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
