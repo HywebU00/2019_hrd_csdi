@@ -345,6 +345,7 @@ $(function() {
             $(this).parents('.menu_nantuo').siblings(_window).eq(floor_index + 1).stop(true, true).fadeIn().find('a.close').focus();
             _N_Building.addClass('zoomin');
             _overlay.fadeIn();
+            $('[class^="menu"] h3').addClass('hidden');
             e.preventDefault();
         });
     });
@@ -363,6 +364,7 @@ $(function() {
             $(this).parents('.menu_teaching').siblings('.teaching_window').find(_window).eq(floor_index).stop(true, true).fadeIn().find('a.close').focus();
             _T_Building.addClass('zoomin_left');
             _overlay.fadeIn();
+            $('[class^="menu"] h3').addClass('hidden');
             e.preventDefault();
         });
     });
@@ -381,6 +383,7 @@ $(function() {
             $(this).parents('.menu_resort').siblings('.resort_window').find(_window).eq(floor_index).stop(true, true).fadeIn().addClass('left').find('a.close').focus();
             _T_Building.addClass('zoomin_right');
             _overlay.fadeIn();
+            $('[class^="menu"] h3').addClass('hidden');
             e.preventDefault();
         });
     });
@@ -399,6 +402,7 @@ $(function() {
             $(this).parents('.menu_meeting').siblings('.meeting_window').find(_window).eq(floor_index).stop(true, true).fadeIn().addClass('left').find('a.close').focus();
             _T_Building.addClass('zoomin_right');
             _overlay.fadeIn();
+            $('[class^="menu"] h3').addClass('hidden');
             e.preventDefault();
         });
     });
@@ -416,6 +420,7 @@ $(function() {
         $('.menu_resort ul').find('a[tabindex=0]').focus();
         $('.menu_meeting ul').find('a[tabindex=0]').focus();
         $('.overlay').hide();
+        $('[class^="menu"] h3').removeClass('hidden');
     }
     _window.find('a.close').click(function(e) {
         CLOSE_W();

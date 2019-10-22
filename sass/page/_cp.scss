@@ -675,35 +675,87 @@ div.tag {
         }
     }
 }
-.floor_block_taipei{
-    span[class^="title"]{
-        display:block;
-        background: #555;
-        color:#FFF;
-        border-radius:4px;
+.floor_block_taipei {
+    span[class^="title"] {
+        display: block;
+        background: $color-orange;
+        color: #FFF;
+        border-radius: 4px;
         text-align: center;
-        padding:.3em .5em;
-        width:6em;
-        position:absolute;
+        padding: .3em .5em;
+        width: 6em;
+        position: absolute;
         line-height: 1;
         font-size: .938em;
         z-index: 9;
-        display:none;
+        display: none;
         @include screen('mobile') {
-            display:block;
+            display: block;
         }
     }
-    span.title_01{
-        left:1em;
-        bottom:20%;
+    span.title_01 {
+        left: 1em;
+        bottom: 35%;
+        &:before {
+            width: 60px;
+            border-top: 2px solid #666;
+            content: "";
+            position: absolute;
+            transform: rotate(-170deg);
+            left: 175px;
+            top: 30px;
+            transform-origin: top left;
+            z-index: 9;
+            @include screen('xs_mobile') {
+                width: 60px;
+                left: 100px;
+                top: 65px;
+                transform: rotate(-145deg);
+                transform-origin: top left;
+            }
+        }
     }
-    span.title_02{
-        right:1em;
-        bottom:35%;
+    span.title_02 {
+        right: 1em;
+        bottom: 35%;
+        &:before {
+            width: 60px;
+            border-top: 2px solid #666;
+            content: "";
+            position: absolute;
+            transform: rotate(-20deg);
+            left: -65px;
+            top: 20px;
+            transform-origin: top right;
+            z-index: 9;
+            @include screen('xs_mobile') {
+                left: 0px;
+                top: 30px;
+                transform: rotate(-30deg);
+                transform-origin: top right;
+            }
+        }
     }
-    span.title_03{
-        right:1em;
-        bottom:10%;
+    span.title_03 {
+        right: 2em;
+        bottom: 10%;
+        &:before {
+            width: 80px;
+            border-top: 2px solid #666;
+            content: "";
+            position: absolute;
+            transform: rotate(20deg);
+            left: -85px;
+            top: 5px;
+            transform-origin: top right;
+            z-index: 9;
+            @include screen('xs_mobile') {
+                width: 40px;
+                left: -45px;
+                transform: rotate(40deg);
+                transform-origin: top right;
+            }
+        }
     }
 }
 // 台北
@@ -745,29 +797,29 @@ div.tag {
 .floor_block_nantuo, .floor_block_taipei {
     overflow: hidden;
     position: relative;
-    @at-root.overlay{
-        position:fixed;
-        background: rgba(0,0,0,.75);
-        top:0;
+    @at-root.overlay {
+        position: fixed;
+        background: rgba(0, 0, 0, .75);
+        top: 0;
         left: 0;
         right: 0;
         z-index: 999998;
-        display:none;
+        display: none;
         height: 0;
         @include screen('mobile') {
-            height:100%;
-            bottom:0;
+            height: 100%;
+            bottom: 0;
         }
     }
     .floor_bg_nantuo, .floor_bg_taipei {
         position: relative;
         z-index: 0;
-        min-height:540px;
+        min-height: 540px;
         transition: .3s ease-out;
         transform: scale(1.2);
         padding-bottom: 2em;
         @include screen('mobile') {
-            transform: scale(1.5);
+            transform: scale(1);
             min-height: auto;
         }
         &.zoomin {
@@ -780,7 +832,7 @@ div.tag {
                 transform: scale(1.5);
             }
         }
-         &.zoomin_left {
+        &.zoomin_left {
             margin-left: -45%;
             margin-top: -10%;
             transform: scale(1.15);
@@ -803,6 +855,11 @@ div.tag {
     }
     // menu共通設定
     [class^="menu"] {
+        h3.hidden {
+            &:before {
+                display: none !important;
+            }
+        }
         width: 9em;
         position: absolute;
         z-index: 2;
@@ -827,7 +884,29 @@ div.tag {
             font-size: 1.5em;
             text-align: center;
             margin: 0 .4em .2em;
+            position: relative;
             color: #ff451d;
+            &:before {
+                width: 400px;
+                border-top: 2px solid #666;
+                content: "";
+                position: absolute;
+                transform: rotate(-150deg);
+                right: -370px;
+                top: 125px;
+                @include screen('tablet') {
+                    width: 260px;
+                    border-top: 1px solid #666;
+                    content: "";
+                    position: absolute;
+                    transform: rotate(-150deg);
+                    right: -240px;
+                    top: 85px;
+                }
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
             @include screen('mobile') {
                 text-align: left;
             }
@@ -898,15 +977,22 @@ div.tag {
     .menu_teaching {
         top: 20%;
         left: 2%;
-        h3{
-            &:before{
-                width: 100px;
-                border-top:1px solid #CCC;
-                content:"";
-                position:absolute;
-                transform:rotate(-150deg);
-                right:10px;      
-                top:0;  
+        h3 {
+            &:before {
+                width: 140px;
+                border-top: 2px solid #666;
+                content: "";
+                position: absolute;
+                transform: rotate(-150deg);
+                right: 10px;
+                top: 20px;
+                transform-origin: top right;
+                @include screen('tablet') {
+                    width: 120px;
+                }
+                @include screen('mobile') {
+                    display: none;
+                }
             }
         }
     }
@@ -914,6 +1000,24 @@ div.tag {
     .menu_resort {
         top: 2%;
         right: 2%;
+        h3 {
+            &:before {
+                width: 170px;
+                border-top: 2px solid #666;
+                content: "";
+                position: absolute;
+                transform: rotate(150deg);
+                left: 7px;
+                top: 25px;
+                transform-origin: top left;
+                @include screen('tablet') {
+                    width: 150px;
+                }
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
+        }
     }
     // 台北集會棟
     .menu_meeting {
@@ -922,6 +1026,27 @@ div.tag {
         @include screen('tablet') {
             bottom: 9%;
             right: 20%;
+        }
+        h3 {
+            &:before {
+                width: 140px;
+                border-top: 2px solid #666;
+                content: "";
+                position: absolute;
+                transform: rotate(10deg);
+                left: -120px;
+                top: -5px;
+                transform-origin: top left;
+                @include screen('tablet') {
+                    width: 120px;
+                    transform: rotate(40deg);
+                    top: -60px;
+                    left: -75px;
+                }
+                @include screen('mobile') {
+                    display: none;
+                }
+            }
         }
     }
     // 南投文教大樓
@@ -949,12 +1074,12 @@ div.tag {
         padding: .5em;
         animation: window_ani;
         animation-duration: .4s;
-        display:none;
-        &.left{
+        display: none;
+        &.left {
             right: auto;
-            left:3em;
+            left: 3em;
             @include screen('mobile') {
-                left:50%;
+                left: 50%;
             }
         }
         @include screen('tablet') {
