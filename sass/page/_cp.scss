@@ -898,6 +898,17 @@ div.tag {
     .menu_teaching {
         top: 20%;
         left: 2%;
+        h3{
+            &:before{
+                width: 100px;
+                border-top:1px solid #CCC;
+                content:"";
+                position:absolute;
+                transform:rotate(-150deg);
+                right:10px;      
+                top:0;  
+            }
+        }
     }
     // 台北住宿棟
     .menu_resort {
