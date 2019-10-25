@@ -1168,12 +1168,12 @@ div.tag {
 
     // 台北集會棟
     .menu_meeting {
-        bottom: 7%;
-        right: 10%;
+        bottom: 10%;
+        right: 12%;
 
         @include screen('tablet') {
-            bottom: 9%;
-            right: 20%;
+            bottom: 15%;
+            right: 12%;
         }
 
         h3 {
