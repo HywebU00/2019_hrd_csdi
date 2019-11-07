@@ -781,6 +781,13 @@ div.tag {
                 top: -5px;
             }
         }
+        @include screen('mobile') {
+            bottom: 7%;
+            right: 10%;
+        }
+         @media screen and (max-width: '430px') {
+            bottom: 5%;
+        }
     }
 }
 // 台北
