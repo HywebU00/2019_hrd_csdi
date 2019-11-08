@@ -701,7 +701,10 @@ div.tag {
         left: 1em;
         bottom: 45%;
         @include screen('xs_mobile') {
-            bottom: 35%;
+            bottom: 39%;
+        }
+        @media screen and (max-width: '430px') {
+            bottom: 34%;
         }
         &:before {
             width: 60px;
@@ -713,11 +716,25 @@ div.tag {
             top: 60px;
             transform-origin: top left;
             z-index: 9;
-            @include screen('xs_mobile') {
+            @include screen('mobile') {
                 width: 50px;
                 left: 100px;
                 top: 60px;
                 transform: rotate(-145deg);
+                transform-origin: top left;
+            }
+            @include screen('xs_mobile') {
+                width: 75px;
+                left: 110px;
+                top: 72px;
+                transform: rotate(-145deg);
+                transform-origin: top left;
+            }
+            @media screen and (max-width: '430px') {
+                width: 50px;
+                left: 70px;
+                top: 65px;
+                transform: rotate(-136deg);
                 transform-origin: top left;
             }
         }
@@ -726,24 +743,27 @@ div.tag {
         right: 1em;
         bottom: 50%;
         @include screen('xs_mobile') {
-            bottom: 42%;
+            bottom: 45%;
+        }
+        @media screen and (max-width: '480px') {
+            bottom: 41%;
         }
         @media screen and (max-width: '430px') {
             bottom: 36%;
         }
         &:before {
-            width: 40px;
+            width: 60px;
             border-top: 2px solid #666;
             content: "";
             position: absolute;
             transform: rotate(-20deg);
-            left: -65px;
+            left: -70px;
             top: 20px;
             transform-origin: top right;
             z-index: 9;
             @include screen('xs_mobile') {
                 width: 60px;
-                left: 0px;
+                left: -20px;
                 top: 26px;
                 transform: rotate(-30deg);
                 transform-origin: top right;
@@ -758,6 +778,9 @@ div.tag {
     span.title_03 {
         right: 2em;
         bottom: 2%;
+        @include screen('xs_mobile') {
+            right: 1em;
+        }
         &:before {
             width: 80px;
             border-top: 2px solid #666;
@@ -768,11 +791,18 @@ div.tag {
             top: 5px;
             transform-origin: top right;
             z-index: 9;
+            @include screen('mobile') {
+                width: 80px;
+                left: -30px;
+                top: -5px;
+                transform: rotate(19deg);
+                transform-origin: top right;
+            }
             @include screen('xs_mobile') {
                 width: 70px;
                 left: -5px;
                 top: -5px;
-                transform: rotate(40deg);
+                transform: rotate(30deg);
                 transform-origin: top right;
             }
             @media screen and (max-width: '430px') {
@@ -785,7 +815,7 @@ div.tag {
             bottom: 7%;
             right: 10%;
         }
-         @media screen and (max-width: '430px') {
+        @media screen and (max-width: '430px') {
             bottom: 5%;
         }
     }
@@ -1022,8 +1052,11 @@ div.tag {
                 right: 10px;
                 top: 20px;
                 transform-origin: top right;
+                @include screen('notebook') {
+                    width: 100px;
+                }
                 @include screen('tablet') {
-                    width: 120px;
+                    width: 40px;
                 }
                 @include screen('mobile') {
                     display: none;
@@ -1037,7 +1070,7 @@ div.tag {
         right: 2%;
         h3 {
             &:before {
-                width: 170px;
+                width: 150px;
                 border-top: 2px solid #666;
                 content: "";
                 position: absolute;
@@ -1045,8 +1078,17 @@ div.tag {
                 left: 7px;
                 top: 25px;
                 transform-origin: top left;
+                @media screen and ("max-width:1170px") {
+                    width: 130px;
+                }
+                @media screen and ("max-width:1024px") {
+                    width: 120px;
+                }
                 @include screen('tablet') {
-                    width: 150px;
+                    width: 90px;
+                }
+                @media screen and ("max-width:860px") {
+                    width: 60px;
                 }
                 @include screen('mobile') {
                     display: none;
@@ -1057,26 +1099,26 @@ div.tag {
     // 台北集會棟
     .menu_meeting {
         bottom: 10%;
-        right: 2%;
+        right: 8%;
         @include screen('tablet') {
             bottom: 15%;
-            right: 12%;
+            right: 10%;
         }
         h3 {
             &:before {
-                width: 140px;
+                width: 80px;
                 border-top: 2px solid #666;
                 content: "";
                 position: absolute;
-                transform: rotate(10deg);
-                left: -120px;
+                transform: rotate(15deg);
+                left: -65px;
                 top: -5px;
                 transform-origin: top left;
                 @include screen('tablet') {
-                    width: 120px;
-                    transform: rotate(40deg);
-                    top: -60px;
-                    left: -75px;
+                    width: 45px;
+                    transform: rotate(30deg);
+                    top: -30px;
+                    left: -12px;
                 }
                 @include screen('mobile') {
                     display: none;
