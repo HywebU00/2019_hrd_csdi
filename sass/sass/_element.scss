@@ -120,8 +120,12 @@ a.more {
     z-index: 999998;
     text-indent: -999999px;
     border-radius: 50%;
-    &:hover, &:focus {
-        background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
+    &:hover{
+        background: url(../images/basic/top.png) no-repeat center top rgba(0,0,0,.75);
+        box-shadow: none;
+    }
+    &:focus {
+        background: url(../images/basic/top.png) no-repeat center top lighten($color-orange,15);
         box-shadow: none;
     }
     &.padding-bottom{
