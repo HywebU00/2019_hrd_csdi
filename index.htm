@@ -11,19 +11,99 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- hyUI -->
-    <link rel="stylesheet" href="css/hyui.css">
-<style>
-    body{background:#36aaa0}h3{color:#FFF}.demo_wrap{max-width:1000px;margin:0em auto 1em;padding:15px 15px 3em;clear:both}.demo_wrap h1{display:block;margin:0px auto;max-width:300px;float:left;margin-right:1em}@media screen and (max-width:545px){.demo_wrap h1{max-width:100%;float:none;text-align:center}}.demo_wrap h1 img{width:300px}.num{width:12%}body{counter-reset:num}table{margin-bottom:1em;background:#FFF}th:last-child{width:15%}table caption{text-align:left;font-weight:bold;font-size:1.25em;padding:.5em 0;color:#ff5050}tbody tr td:first-child:before{counter-increment:num;display:block;text-align:center;content:counters(num,".") " "}tbody tr td:nth-child(2){width:35%}.btn_grp{text-align:right}@media screen and (max-width:545px){.btn_grp{text-align:center}}hr{border:1px solid transparent}td span{display:block;background:rgba(0,128,0,.1);color:green;text-align:center;padding:.2em .5em;border-radius:.4em;margin:0px auto;max-width:4em}</style>
+    <link rel="stylesheet" href="cht/css/hyui.css">
+    <style>
+    body {
+        background: #36aaa0
+    }
+    h3 {
+        color: #FFF
+    }
+    .demo_wrap {
+        max-width: 1000px;
+        margin: 0em auto 1em;
+        padding: 15px 15px 3em;
+        clear: both
+    }
+    .demo_wrap h1 {
+        display: block;
+        margin: 0px auto;
+        max-width: 300px;
+        float: left;
+        margin-right: 1em
+    }
+    @media screen and (max-width:545px) {
+        .demo_wrap h1 {
+            max-width: 100%;
+            float: none;
+            text-align: center
+        }
+    }
+    .demo_wrap h1 img {
+        width: 300px
+    }
+    .num {
+        width: 12%
+    }
+    body {
+        counter-reset: num
+    }
+    table {
+        margin-bottom: 1em;
+        background: #FFF
+    }
+    th:last-child {
+        width: 15%
+    }
+    table caption {
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.25em;
+        padding: .5em 0;
+        color: #ff5050
+    }
+    tbody tr td:first-child:before {
+        counter-increment: num;
+        display: block;
+        text-align: center;
+        content: counters(num, ".") " "
+    }
+    tbody tr td:nth-child(2) {
+        width: 35%
+    }
+    .btn_grp {
+        text-align: right
+    }
+    @media screen and (max-width:545px) {
+        .btn_grp {
+            text-align: center
+        }
+    }
+    hr {
+        border: 1px solid transparent
+    }
+    td span {
+        display: block;
+        background: rgba(0, 128, 0, .1);
+        color: green;
+        text-align: center;
+        padding: .2em .5em;
+        border-radius: .4em;
+        margin: 0px auto;
+        max-width: 4em
+    }
+    </style>
 </head>
 
 <body>
     <div class="demo_wrap">
-        <h1><img src="images/logo.png" alt=""></h1>
+        <h1><img src="cht/images/logo.png" alt=""></h1>
         <div class="btn_grp">
             <a href="https://drive.google.com/drive/folders/1m2am2vN6qwilWcF403mKq9xgb1998d0n?usp=sharing" class="btn" target="_blank">切版檔案請按此下載</a>
         </div>
         <hr>
         <div class="table_wrapper">
+            <h2 style="color:#FFF">中文</h2>
             <h3>標準頁面</h3>
             <!-- hyUI 標準頁面 -->
             <table>
@@ -31,7 +111,8 @@
                     <tr>
                         <th class="num">編號</th>
                         <th>頁面名稱</th>
-                        <th>檔案名稱</th>
+                        <th>中文檔案</th>
+                        <th>英文檔案</th>
                         <th>進度</th>
                     </tr>
                 </thead>
@@ -40,87 +121,101 @@
                         <td></td>
                         <td>首頁 藍綠色</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="mp.htm"></a></td>
+                        <td><a href="cht/mp.htm"></a></td>
+                        <td><a href="eng/mp.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>首頁 紫色</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="mp_01.htm"></a></td>
+                        <td><a href="cht/mp_01.htm"></a></td>
+                        <td><a href="eng/mp_01.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>首頁 綠色</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="mp_02.htm"></a></td>
+                        <td><a href="cht/mp_02.htm"></a></td>
+                        <td><a href="eng/mp_02.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>列表頁</td>
-                        <td><a href="lp.htm"></a></td>
+                        <td><a href="cht/lp.htm"></a></td>
+                        <td><a href="eng/lp.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>列表頁-廣告banner</td>
-                        <td><a href="lp_ad.htm"></a></td>
+                        <td><a href="cht/lp_ad.htm"></a></td>
+                        <td><a href="eng/lp_ad.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>列表頁-表格</td>
-                        <td><a href="lp_table.htm"></a></td>
+                        <td><a href="cht/lp_table.htm"></a></td>
+                        <td><a href="eng/lp_table.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>列表頁-相簿</td>
-                        <td><a href="lp_album.htm"></a></td>
+                        <td><a href="cht/lp_album.htm"></a></td>
+                        <td><a href="eng/lp_album.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>內容頁</td>
-                        <td><a href="cp.htm"></a></td>
+                        <td><a href="cht/cp.htm"></a></td>
+                        <td><a href="eng/cp.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>內容頁只有照片</td>
-                        <td><a href="cp_only_photo.htm"></a></td>
+                        <td><a href="cht/cp_only_photo.htm"></a></td>
+                        <td><a href="eng/cp_only_photo.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>內容頁-照片</td>
-                        <td><a href="cp_photo.htm"></a></td>
+                        <td><a href="cht/cp_photo.htm"></a></td>
+                        <td><a href="eng/cp_photo.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>節點頁</td>
-                        <td><a href="np.htm"></a></td>
+                        <td><a href="cht/np.htm"></a></td>
+                        <td><a href="eng/np.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>轉寄友人</td>
-                        <td><a href="fp.htm"></a></td>
+                        <td><a href="cht/fp.htm"></a></td>
+                        <td><a href="eng/fp.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>意見信箱</td>
-                        <td><a href="qp.htm"></a></td>
+                        <td><a href="cht/qp.htm"></a></td>
+                        <td><a href="eng/qp.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>404 網站錯誤</td>
-                        <td><a href="404.htm"></a></td>
+                        <td><a href="cht/404.htm"></a></td>
+                        <td><a href="eng/404.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                 </tbody>
@@ -134,7 +229,8 @@
                     <tr>
                         <th class="num">編號</th>
                         <th>頁面名稱</th>
-                        <th>檔案名稱</th>
+                        <th>中文檔案</th>
+                        <th>英文檔案</th>
                         <th>進度</th>
                     </tr>
                 </thead>
@@ -142,36 +238,42 @@
                     <!--  <tr>
                         <td></td>
                         <td>電子報</td>
-                        <td><a href="epaper.htm"></a></td>
+                        <td><a href="cht/epaper.htm"></a></td>
+
                     </tr> -->
                     <tr>
                         <td></td>
                         <td>網站地圖</td>
-                        <td><a href="sitemap.htm"></a></td>
+                        <td><a href="cht/sitemap.htm"></a></td>
+                        <td><a href="eng/sitemap.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>NP服務園地</td>
-                        <td><a href="np_01.htm"></a></td>
+                        <td><a href="cht/np_01.htm"></a></td>
+                        <td><a href="eng/np_01.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>LP_學員須知分類</td>
-                        <td><a href="lp_01.htm"></a></td>
+                        <td><a href="cht/lp_01.htm"></a></td>
+                        <td><a href="eng/lp_01.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>LP_會議場地(圖片+說明)</td>
-                        <td><a href="lp_02.htm"></a></td>
+                        <td><a href="cht/lp_02.htm"></a></td>
+                        <td><a href="eng/lp_02.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>CP_檔案應用服務</td>
-                        <td><a href="cp_01.htm"></a></td>
+                        <td><a href="cht/cp_01.htm"></a></td>
+                        <td><a href="eng/cp_01.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                 </tbody>
@@ -184,7 +286,8 @@
                     <tr>
                         <th class="num">編號</th>
                         <th>頁面名稱</th>
-                        <th>檔案名稱</th>
+                        <th>中文檔案</th>
+                        <th>英文檔案</th>
                         <th>進度</th>
                     </tr>
                 </thead>
@@ -192,68 +295,80 @@
                     <tr>
                         <td></td>
                         <td>場地預約</td>
-                        <td><a href="sp_reservation.htm"></a></td>
+                        <td><a href="cht/sp_reservation.htm"></a></td>
+                        <td><a href="eng/sp_reservation.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>場地預約填寫資料</td>
-                        <td><a href="sp_reservation_form.htm"></a></td>
+                        <td><a href="cht/sp_reservation_form.htm"></a></td>
+                        <td><a href="eng/sp_reservation_form.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>交通位置(台北)</td>
-                        <td><a href="cp_traffic_01.htm"></a></td>
+                        <td><a href="cht/cp_traffic_01.htm"></a></td>
+                        <td><a href="eng/cp_traffic_01.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>交通位置(南投)</td>
-                        <td><a href="cp_traffic_02.htm"></a></td>
+                        <td><a href="cht/cp_traffic_02.htm"></a></td>
+                        <td><a href="eng/cp_traffic_02.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>網路民調-參與民調</td>
-                        <td><a href="sp_survey.htm"></a></td>
+                        <td><a href="cht/sp_survey.htm"></a></td>
+                        <td><a href="eng/sp_survey.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>緊急訊息</td>
-                        <td><a href="sp_emergency.htm"></a></td>
+                        <td><a href="cht/sp_emergency.htm"></a></td>
+                        <td><a href="eng/sp_emergency.htm"></a></td>
+
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>系統正在維護(獨立一頁)</td>
-                        <td><a href="sp_maintain.htm"></a></td>
+                        <td><a href="cht/sp_maintain.htm"></a></td>
+                         <td><a href="eng/sp_maintain.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>系統正在維護(首頁)</td>
-                        <td><a href="mp_emergency.htm"></a></td>
+                        <td><a href="cht/mp_emergency.htm"></a></td>
+                        <td><a href="eng/mp_emergency.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>南投-樓層介紹</td>
-                        <td><a href="cp_floor_nantuo.htm"></a></td>
+                        <td><a href="cht/cp_floor_nantuo.htm"></a></td>
+                        <td><a href="eng/cp_floor_nantuo.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>台北-樓層介紹</td>
-                        <td><a href="cp_floor_taipei.htm"></a></td>
+                        <td><a href="cht/cp_floor_taipei.htm"></a></td>
+                        <td><a href="eng/cp_floor_taipei.htm"></a></td>
                         <td><span>ok</span></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>720度導覽</td>
-                        <td><a href="720.htm"></a></td>
-                       <td><span>ok</span></td>
+                        <td><a href="cht/720.htm"></a></td>
+                        <td><a href="eng/720.htm"></a></td>
+                        <td><span>ok</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -261,10 +376,10 @@
     </div>
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="vendor/jquery.easing.min.js"></script>
-    <script src="js/hyui.js"></script>
-    <script src="js/customize.js"></script>
+    <script src="cht/js/jquery-3.3.1.min.js"></script>
+    <script src="cht/vendor/jquery.easing.min.js"></script>
+    <script src="cht/js/hyui.js"></script>
+    <script src="cht/js/customize.js"></script>
     <script>
     $(function() {
         $('tbody').find('a').each(function(index, el) {

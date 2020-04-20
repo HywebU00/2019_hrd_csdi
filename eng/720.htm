@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>公務人力發展學院</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <!-- vr css -->
+    <link rel="stylesheet" href="css/vr.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- VR大圖影像區域 -->
+    <div class="vr_zone">
+    </div>
+    <!-- 控制面板 -->
+    <div class="control_sidebar">
+        <a href="#" class="switch_btn">收合選單</a>
+        <div class="panel">
+            <h1><img src="images/logo.png" alt="公務人力發展學院"></h1>
+            <h2><img src="images/720.png" alt="720度環場系統"></h2>
+            <div class="info">
+                <img src="images/720ctrl.png" alt="">
+                <ul>
+                    <li>使用鍵盤的方向鍵或滑鼠左鍵即可控制導覽視角</li>
+                    <li>使用鍵盤Shift鍵可以拉近</li>
+                    <li>使用鍵盤Ctrl鍵可以拉遠</li>
+                    <li>左上方框框及下方雙箭頭可開啟全螢幕模式</li>
+                </ul>
+            </div>
+            <div class="select_area">
+                <!-- 順序不要變，已用index()對應 -->
+                <div class="floor_select">
+                    <a href="#">請選擇樓層</a>
+                    <ul>
+                        <li><a href="#">住宿棟14F</a></li>
+                        <li><a href="#">教學棟5F</a></li>
+                        <li><a href="#">4F</a></li>
+                        <li><a href="#">3F</a></li>
+                        <li><a href="#">2F</a></li>
+                        <li><a href="#">1F</a></li>
+                        <li><a href="#">B1</a></li>
+                    </ul>
+                </div>
+                <div class="floor_zone">
+                    <div class="floor_14f">
+                        <div class="pic">
+                            <a href="#" class="btn_01" title="貴賓廳(交誼區)"></a>
+                            <a href="#" class="btn_02" title="貴賓廳(會議區)"></a>
+                            <img src="images/720/14F.png" alt="">
+                        </div>
+                        <span>住宿棟14F</span>
+                    </div>
+                    <div class="floor_5f">
+                        <div class="pic">
+                            <a href="#" class="btn_01" title="501電腦教室"></a>
+                            <img src="images/720/5F.png" alt="">
+                        </div>
+                        <span>教學棟5F</span>
+                    </div>
+                    <div class="floor_4f">
+                        <div class="pic">
+                            <a href="#" class="btn_01" title="圖書館"></a>
+                            <a href="#" class="btn_02" title="人才衡鑑研發室"></a>
+                            <a href="#" class="btn_03" title="數位科技教室"></a>
+                            <img src="images/720/4F.png" alt="">
+                        </div>
+                        <span>4F</span>
+                    </div>
+                    <div class="floor_3f">
+                        <div class="pic">
+                            <a href="#" class="btn_01" title="研討室教室"></a>
+                            <a href="#" class="btn_02" title="商務中心"></a>
+                            <img src="images/720/3F.png" alt="">
+                        </div>
+                        <span>3F</span>
+                    </div>
+                    <div class="floor_2f">
+                        <div class="pic">
+                            <a href="#" class="btn_01" title="悅香軒"></a>
+                            <a href="#" class="btn_02" title="集會棟卓越堂"></a>
+                            <img src="images/720/2F.png" alt="">
+                        </div>
+                        <span>2F</span>
+                    </div>
+                    <div class="floor_1f">
+                        <div class="pic">
+                            <a href="#" class="btn_01" title="大門口"></a>
+                            <a href="#" class="btn_02" title="大廳"></a>
+                            <a href="#" class="btn_03" title="中庭"></a>
+                            <a href="#" class="btn_04" title="戶外庭園"></a>
+                            <a href="#" class="btn_05" title="集會棟前瞻廳"></a>
+                            <a href="#" class="btn_06" title="恬園餐廳"></a>
+                            <a href="#" class="btn_07" title="101"></a>
+                            <a href="#" class="btn_08" title="103"></a>
+                            <img src="images/720/1F.png" alt="">
+                        </div>
+                        <span>1F</span>
+                    </div>
+                    <div class="floor_b1">
+                        <div class="pic">
+                            <a href="#" class="btn_01" title="溫水游泳池"></a>
+                            <a href="#" class="btn_02" title="風尚咖啡"></a>
+                            <img src="images/720/B1.png" alt="">
+                        </div>
+                        <span>B1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script>
+    $(function() {
+        var _floor_select = $('.floor_select'),
+            _floor_zone = $('.floor_zone'),
+            _control_sidebar = $('.control_sidebar'),
+            _switch_btn = $('.switch_btn');
+        $('.info').insertAfter('.select_area');
+        _floor_zone.children().hide();
+        _floor_select.find('ul').hide();
+        _floor_select.find('a:first').off().click(function(e) {
+            $(this).next('ul').stop(true, true).slideToggle(400, 'easeOutQuint');
+            e.preventDefault();
+        });
+        _floor_zone.children('div:first').show();
+        _floor_select.find('ul li').each(function(index, el) {
+            var floor_index = $(this).index();
+            $(this).find('a').off().click(function(e) {
+                _floor_zone.children('div').hide();
+                _floor_zone.children('div').eq(floor_index).stop().fadeIn();
+                _floor_select.find('ul').hide();
+                e.preventDefault();
+            });
+        });
+        var status = false,
+            _Sw = _control_sidebar.width() + 16;
+        _control_sidebar.css('right', -3 * _Sw);
+        _control_sidebar.delay(0).animate({ 'right': 0 }, 1000, 'easeOutQuint');
+        _switch_btn.off().click(function(e) {
+            if (status) {
+                _control_sidebar.animate({ 'right': 0 }, 400, 'easeOutQuint');
+                $(this).html("收合選單");
+                status = false;
+            } else {
+                _control_sidebar.animate({ 'right': -1 * _Sw }, 600, 'easeOutQuint');
+                $(this).html("開啟選單");
+                status = true;
+            }
+            $(this).blur();
+            e.preventDefault();
+        });
+    });
+    </script>
+</body>
+
+</html>
